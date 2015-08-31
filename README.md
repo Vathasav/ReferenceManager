@@ -1,6 +1,6 @@
 # ReferenceManager
 
-This is application to manage references and corresponding data
+Application to manage references and corresponding data
 =================================
 
 Application allows to manage references between collaborators.
