@@ -5,22 +5,21 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-
+// get database module and initiate connection
 var mongoose = require('mongoose');
-
 mongoose.connect('mongodb://localhost/news');
 
 
-
+//database schemas
 require('./models/Posts');
 require('./models/Comments');
 
-
+//index contains REST interface for handling requests
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 
-
+//initiate app
 var app = express();
 
 // view engine setup
@@ -71,5 +70,5 @@ app.use(function(err, req, res, next) {
     });
 });
 
-
+//exporting module
 module.exports = app;
